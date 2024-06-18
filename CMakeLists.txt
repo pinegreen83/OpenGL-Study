@@ -6,13 +6,23 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Include directories
-include_directories(${PROJECT_SOURCE_DIR}/external/include)
+include_directories(${PROJECT_SOURCE_DIR}/external/include ${PROJECT_SOURCE_DIR}/common)
 
 # Link directories
 link_directories(${PROJECT_SOURCE_DIR}/external/lib)
 
-# Add the executable
-add_executable(main src/main.cpp)
+# 공통 소스 파일
+set(COMMON_SOURCES
+    ${PROJECT_SOURCE_DIR}/common/shader.cpp
+)
+
+# 메인 파일
+set(MAIN_SOURCES
+    ${PROJECT_SOURCE_DIR}/src/main.cpp
+)
+
+# 실행 파일 설정
+add_executable(main ${MAIN_SOURCES} ${COMMON_SOURCES})
 
 # Link libraries
 if(APPLE)
