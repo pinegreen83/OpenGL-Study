@@ -14,6 +14,7 @@ link_directories(${PROJECT_SOURCE_DIR}/external/lib)
 # 공통 소스 파일
 set(COMMON_SOURCES
     ${PROJECT_SOURCE_DIR}/common/shader.cpp
+    ${PROJECT_SOURCE_DIR}/common/texture.cpp
 )
 
 # 메인 파일

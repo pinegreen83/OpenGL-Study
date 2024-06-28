@@ -245,5 +245,6 @@ int main()
     // OpenGL 화면 닫고 GLFW 종료
     glfwDestroyWindow(window);
     glfwTerminate();
+    
     return 0;
 }
