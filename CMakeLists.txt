@@ -15,6 +15,7 @@ link_directories(${PROJECT_SOURCE_DIR}/external/lib)
 set(COMMON_SOURCES
     ${PROJECT_SOURCE_DIR}/common/shader.cpp
     ${PROJECT_SOURCE_DIR}/common/texture.cpp
+    ${PROJECT_SOURCE_DIR}/common/controls.cpp
 )
 
 # 메인 파일
